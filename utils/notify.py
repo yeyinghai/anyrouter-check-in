@@ -25,7 +25,7 @@ class NotificationKit:
 		self.telegram_bot_token = os.getenv('TELEGRAM_BOT_TOKEN')
 		self.telegram_chat_id = os.getenv('TELEGRAM_CHAT_ID')
 		self.bark_key = os.getenv('BARK_KEY')
-		self.bark_server = os.getenv('BARK_SERVER', 'https://api.day.app')
+		self.bark_server = os.getenv('BARK_SERVER')
 
 	def send_email(self, title: str, content: str, msg_type: Literal['text', 'html'] = 'text'):
 		if not self.email_user or not self.email_pass or not self.email_to:
